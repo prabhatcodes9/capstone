@@ -1,0 +1,436 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <style>
+    * {
+        margin: 0;
+    padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background: #fff;
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      padding: 1rem;
+    }
+    .container {
+      background-color: #19232D;
+      border-radius: 20px;
+      padding: 24px 32px;
+      max-width: 400px;
+      width: 100%;
+      color: white;
+      text-align: center;
+      font-feature-settings: 'liga' 0;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 40px ; 
+      
+    }
+    .container h2 {
+      color: #2AA67A;
+      font-weight: 800;
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+    .container p.subtitle {
+      font-weight: 600;
+      font-size: 0.875rem;
+      margin-bottom: 24px;
+    }
+    form {
+      text-align: left;
+    }
+    .row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .row input[type="number"] {
+      flex: 1;
+    }
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: none;
+      font-size: 1rem;
+      color: #4a4a4a;
+      font-weight: 500;
+      outline-offset: 2px;
+      outline-color: transparent;
+      transition: outline-color 0.2s ease;
+    }
+    input::placeholder,
+    select option[disabled] {
+      color: #7a7a7a;
+      font-weight: 500;
+      top: 15px;
+      font-size: 0.9em;
+    }
+    input:focus,
+    input:valid,
+    select:focus {
+      outline-color: #2AA67A;
+      background-color: #fff;
+      top: 30px;
+      font-size: 0.7em;
+      font-weight: 600;
+    }
+    select {
+      background-color: #fff;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg fill='%237a7a7a' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      background-size: 20px 20px;
+      cursor: pointer;
+    }
+    button {
+      width: 100%;
+      background-color: #2AA67A;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 12px 0;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+    button:hover,
+    button:focus {
+      background-color: #238a63;
+      outline: none;
+    }
+    h2 { 
+        font-size: 30px;
+        text-decoration: underline;
+        margin-top: auto;
+    }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .sub-menu-wrap {
+    font-family: 'sans-serif';
+    position: absolute;
+    top: 12%;
+    right: 2%;
+    width: 300px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+  .sub-menu-wrap.open-menu{
+    max-height: 400px;
+  }
+  .sub-menu {
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+  }
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  .user-info h2 {
+    font-weight: 500;
+ }
+ .user-info img {
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+ }
+ .sub-menu hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin: 15px 0 10px;
+ }
+ .sub-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #1a1a1a;
+    margin: 12px 0 ;
+ }
+ .sub-menu-link p {
+    width: 100%;
+ }
+ .sub-menu-link img {
+    width: 40px;
+    background: #e5e5e5;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px;
+ }
+ .sub-menu-link span {
+    font-size: 22px;
+    transition: 0.5s;
+ }
+ .sub-menu-link:hover span{
+    transform: translateX(5px);
+ }
+ .sub-menu-link:hover p{
+    font-weight: 600;
+ }
+ main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 0;
+ }
+ .imgg img{
+    width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+ }
+ .result {
+      margin-top: 20px;
+      background: whitesmoke;
+      padding: 15px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <div class="logo1">
+            <img src="WhatsApp_Image_2025-04-19_at_14.15.24-removebg-preview.png" class="logo">
+        </div>
+        <nav>
+        <img src="user.png" class="profile-pic" onclick="toggleMenu()">
+
+    <div class="sub-menu-wrap" id="subMenu">
+        <div class="sub-menu">
+            <div class="user-info">
+                <img src="user.png" >
+                <h2>User</h2>
+            </div>
+            <hr>
+            <a href="#" class="sub-menu-link">
+                <img src="profile.png">
+                <p>Profile</p>
+                <span>></span>
+            </a>
+            <a href="#" class="sub-menu-link">
+                <img src="setting.png">
+                <p>Settings & Privacy</p>
+                <span>></span>
+            </a>
+            <a href="#" class="sub-menu-link">
+                <img src="help.png">
+                <p>Help</p>
+                <span>></span>
+            </a>
+            <a href="#" class="sub-menu-link">
+                <img src="logout.png">
+                <p>Logout</p>
+                <span>></span>
+            </a>
+
+        </div>
+    </div>
+        </nav>
+      </header>
+      <main>
+        <div class="imgg">
+            <img src="vecteezy_a-cartoon-man-with-a-barbell-bodybuilding_37846260.png">
+          </div>
+  <span><div class="container" role="main" aria-label="Register form">
+    <h2>Fitness Calculator</h2>
+    <p class="subtitle">Know Your Potential</p>
+    <form>
+      <div class="row">
+        <input type="number" id="weight" placeholder="Weight" name="weight" required autocomplete="weight in kg" />
+        <input type="number" id="height" placeholder="Height" name="height" required autocomplete="height in cm" />
+      </div>
+      <input type="number" id="age" placeholder="Age" name="age" required autocomplete="age" style="margin-bottom:16px;" />
+      <select name="gender" id="gender" required aria-label="Gender">
+        <option value="" disabled selected>Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      <select name="activity-level" id="activity" required aria-label="Activity level" style="margin-top:16px;">
+        <option value="" disabled selected>Activity level</option>
+        <option value="1.2">Basic or No exercise</option>
+        <option value="1.375">Exercise 1-3 times a week</option>
+        <option value="1.5">Exercise 4-5 times a week</option>
+        <option value="1.9">Regular gym and heavy workout</option>
+      </select>
+      <button onclick="calculate()">Calculate</button>
+      <span><div class="result" id="results"></div></span>
+    </form>
+  </div></span>
+  <span><div class="container" role="main" aria-label="Register form">
+    <h2>Diet Preferences</h2>
+    <p class="subtitle">Know Your Perfect Diet Plan</p>
+    <form>
+      <div class="row">
+        <input type="number" id="dietWeight" placeholder="Weight" name="weight" required autocomplete="weight in kg" />
+        <input type="number" id="calories" placeholder="Target Calories" name="calories" required autocomplete="calorie" />
+      </div>
+      <input type="number" placeholder="Any allergy items" name="allergy" required autocomplete="allergy" style="margin-bottom:16px;" />
+      <select name="Diet" id="preference"  aria-label="Preference">
+        <option value="" disabled selected>Diet</option>
+        <option value="veg">Vegetarian</option>
+        <option value="non-veg">Non-Vegetarian</option>
+      </select>
+      <select name="activity-level" required aria-label="Activity level" style="margin-top:16px;">
+        <option value="disabled selected">Activity level</option>
+        <option value="low" name="exercise">Basic or No exercise</option>
+        <option value="medium" name="exercise">Exercise 1-3 times a week</option>
+        <option value="high" name="exercise">Exercise 4-5 times a week</option>
+        <option value="high" name="exercise">Regular gym and heavy workout</option>
+      </select>
+      <button onclick="showDietPlan()">Show Diet Plan</button>
+      <div class="result" id="dietResult"></div>
+    </form>
+  </div></span>
+</main>
+<script>
+    function calculate() {
+      const height = parseFloat(document.getElementById('height').value);
+      const weight = parseFloat(document.getElementById('weight').value);
+      const age = parseInt(document.getElementById('age').value);
+      const gender = document.getElementById('gender').value;
+      const activity = parseFloat(document.getElementById('activity').value);
+
+      if (!height || !weight || !age) return alert('Please fill all inputs');
+
+      let bmr;
+      if (gender === 'male') {
+        bmr = 10 * weight + 6.25 * height - 5 * age + 5;
+      } else {
+        bmr = 10 * weight + 6.25 * height - 5 * age - 161;
+      }
+
+      const maintenance = Math.round(bmr * activity);
+      const mildLoss = Math.round(maintenance - 250);
+      const loss = Math.round(maintenance - 500);
+      const extremeLoss = Math.round(maintenance - 750);
+      const bmi = (weight / ((height / 100) ** 2)).toFixed(2);
+
+      document.getElementById('results').innerHTML = `
+        <strong>BMI:</strong> ${bmi}<br/>
+        <strong>Maintenance Calories:</strong> ${maintenance}<br/>
+        <strong>Mild Weight Loss:</strong> ${mildLoss}<br/>
+        <strong>Weight Loss:</strong> ${loss}<br/>
+        <strong>Extreme Weight Loss:</strong> ${extremeLoss}
+      `;
+    }
+    function showDietPlan() {
+  const cal = parseInt(document.getElementById('calories').value);
+  const pref = document.getElementById('preference').value;
+  const weight = document.getElementById('dietWeight').value;
+  const exercise = document.querySelector('input[name="exercise"]:checked').value;
+
+  if (!cal || !weight) return alert("Please enter calories and weight.");
+
+  const mealSplit = {
+    breakfast: Math.round(cal * 0.25),
+    lunch: Math.round(cal * 0.35),
+    dinner: Math.round(cal * 0.30),
+    snacks: Math.round(cal * 0.10),
+  };
+
+  // Define multiple options for each meal
+  const mealPlans = {
+    veg: {
+      breakfast: [
+        `Oats with fruits and nuts (~${mealSplit.breakfast} cal)`,
+        `Vegetable upma with coconut chutney (~${mealSplit.breakfast} cal)`,
+        `Multigrain toast with peanut butter (~${mealSplit.breakfast} cal)`
+      ],
+      lunch: [
+        `Paneer curry, roti, salad (~${mealSplit.lunch} cal)`,
+        `Rajma rice with cucumber salad (~${mealSplit.lunch} cal)`,
+        `Soybean curry, roti, sautéed greens (~${mealSplit.lunch} cal)`
+      ],
+      dinner: [
+        `Dal, rice, steamed veggies (~${mealSplit.dinner} cal)`,
+        `Khichdi with curd (~${mealSplit.dinner} cal)`,
+        `Vegetable stir fry with quinoa (~${mealSplit.dinner} cal)`
+      ],
+      snacks: [
+        `Fruits or roasted chana (~${mealSplit.snacks} cal)`,
+        `Mixed nuts (~${mealSplit.snacks} cal)`,
+        `Protein bar (~${mealSplit.snacks} cal)`
+      ]
+    },
+    'non-veg': {
+      breakfast: [
+        `Boiled eggs and toast (~${mealSplit.breakfast} cal)`,
+        `Chicken sausage with omelet (~${mealSplit.breakfast} cal)`,
+        `Greek yogurt with berries (~${mealSplit.breakfast} cal)`
+      ],
+      lunch: [
+        `Grilled chicken, rice, salad (~${mealSplit.lunch} cal)`,
+        `Egg curry with chapati (~${mealSplit.lunch} cal)`,
+        `Chicken biryani with raita (~${mealSplit.lunch} cal)`
+      ],
+      dinner: [
+        `Fish curry and brown rice (~${mealSplit.dinner} cal)`,
+        `Grilled salmon with veggies (~${mealSplit.dinner} cal)`,
+        `Chicken stew with quinoa (~${mealSplit.dinner} cal)`
+      ],
+      snacks: [
+        `Yogurt or boiled eggs (~${mealSplit.snacks} cal)`,
+        `Tuna sandwich (~${mealSplit.snacks} cal)`,
+        `Protein shake (~${mealSplit.snacks} cal)`
+      ]
+    }
+  };
+
+  const selectedPlan = mealPlans[pref];
+
+  // Random picker from options
+  const getRandom = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+  let plan = `
+    <strong>Diet Plan Summary:</strong><br/>
+    Calories: ${cal}<br/>
+    Preference: ${pref}<br/>
+    Weight: ${weight}kg<br/>
+    Exercise Daily: ${exercise}<br/><br/>
+    <strong>Sample Meal Plan:</strong><br/>
+    <u>Breakfast</u>: ${getRandom(selectedPlan.breakfast)}<br/>
+    <u>Lunch</u>: ${getRandom(selectedPlan.lunch)}<br/>
+    <u>Dinner</u>: ${getRandom(selectedPlan.dinner)}<br/>
+    <u>Snacks</u>: ${getRandom(selectedPlan.snacks)}
+  `;
+
+  document.getElementById('dietResult').innerHTML = plan;
+}
+  </script>
+
+</body>
+</html>

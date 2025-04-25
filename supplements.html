@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gym Supplement Brands</title>
+  <link rel="stylesheet" href="supplements.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo1">
+        <img src="WhatsApp_Image_2025-04-19_at_14.15.24-removebg-preview.png" class="logo">
+    </div>
+    <nav>
+    <img src="user.png" class="profile-pic" onclick="toggleMenu()">
+
+<div class="sub-menu-wrap" id="subMenu">
+    <div class="sub-menu">
+        <div class="user-info">
+            <img src="user.png" >
+            <h2>User</h2>
+        </div>
+        <hr>
+        <a href="#" class="sub-menu-link">
+            <img src="profile.png">
+            <p>Profile</p>
+            <span>></span>
+        </a>
+        <a href="#" class="sub-menu-link">
+            <img src="setting.png">
+            <p>Settings & Privacy</p>
+            <span>></span>
+        </a>
+        <a href="#" class="sub-menu-link">
+            <img src="help.png">
+            <p>Help</p>
+            <span>></span>
+        </a>
+        <a href="#" class="sub-menu-link">
+            <img src="logout.png">
+            <p>Logout</p>
+            <span>></span>
+        </a>
+
+    </div>
+</div>
+    </nav>
+  </header>
+<main>
+    <div class="imgg">
+    <img src="WhatsApp_Image_2025-04-19_at_22.26.06-removebg-preview.png">
+    </div>
+    <div class="container">
+      <h1>Supplements Guide</h1>
+      <p>Comprehensive insights into various fitness supplements for safe and effective use.</p>
+  
+      <h2>Protein Powders</h2>
+      <p>Explore various types of protein powders like whey, casein, and plant-based options. Learn about their benefits, usage, and recommended dosages.</p>
+  
+      <h2>Creatine</h2>
+      <p>Understand the role of creatine in enhancing athletic performance and muscle growth, along with its safe usage and potential side effects.</p>
+  
+      <h2>Pre-Workouts</h2>
+     <p>Discover the ingredients in pre-workout supplements, their impact on energy and focus, and guidelines for consumption.</p>
+  
+      <h2>Vitamins and Minerals</h2>
+      <p>Learn about essential vitamins and minerals for fitness enthusiasts, their importance, and how to incorporate them into your diet.</p>
+  
+      <h2>Other Supplements</h2>
+      <p>Gain insights into other fitness supplements, including BCAAs, L-Carnitine, and more, with guidance on their proper usage.</p>
+  </div>
+
+  <section id="brands">
+    <!-- Brand Logos -->
+    <div class="brand" onclick="showProducts('on')">
+      <img src="logo-optimum-nutrition-horizontal-512.png" alt="Optimum Nutrition">
+    </div>
+    <div class="brand" onclick="showProducts('mb')">
+      <img src="WhatsApp_Image_2025-04-19_at_21.52.21-removebg-preview.png" alt="MuscleBlaze">
+    </div>
+    <div class="brand" onclick="showProducts('mp')">
+      <img src="WhatsApp_Image_2025-04-19_at_21.56.58-removebg-preview.png" alt="MyProtein">
+    </div>
+    <div class="brand" onclick="showProducts('dc')">
+      <img src="WhatsApp_Image_2025-04-19_at_22.04.25-removebg-preview.png" alt="MyProtein">
+    </div>
+    <div class="brand" onclick="showProducts('nb')">
+      <img src="WhatsApp_Image_2025-04-19_at_22.08.16-removebg-preview.png" alt="MyProtein">
+    </div>
+  </section>
+
+  <section id="products">
+    <!-- Product list dynamically injected here -->
+  </section></main>
+
+  <script src="supplements.js"></script>
+</body>
+</html>

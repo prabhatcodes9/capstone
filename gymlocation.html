@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Locator</title>
+    <link rel="stylesheet" href="gymlocation.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpHH2FOw4bT1myZUUCt1IgfpTIKqHJEp0&libraries=places"></script>
+</head>
+<body>
+    <header>
+        <div class="logo1">
+            <img src="WhatsApp_Image_2025-04-19_at_14.15.24-removebg-preview.png" class="logo">
+        </div>
+        <nav>
+        <img src="user.png" class="profile-pic" onclick="toggleMenu()">
+
+    <div class="sub-menu-wrap" id="subMenu">
+        <div class="sub-menu">
+            <div class="user-info">
+                <img src="user.png" >
+                <h2>User</h2>
+            </div>
+            <hr>
+            <a href="#" class="sub-menu-link">
+                <img src="profile.png">
+                <p>Profile</p>
+                <span>></span>
+            </a>
+            <a href="#" class="sub-menu-link">
+                <img src="setting.png">
+                <p>Settings & Privacy</p>
+                <span>></span>
+            </a>
+            <a href="#" class="sub-menu-link">
+                <img src="help.png">
+                <p>Help</p>
+                <span>></span>
+            </a>
+            <a href="#" class="sub-menu-link">
+                <img src="logout.png">
+                <p>Logout</p>
+                <span>></span>
+            </a>
+
+        </div>
+    </div>
+        </nav>
+      </header>
+    <div class="container">
+        <h1>Find Gyms Near You</h1>
+        <form id="locationForm">
+            <select id="locationForm" name="state">
+                <option value="none">State</option>
+                <option value="state">Andhra Pradesh</option>
+                <option value="state">Arunachal Pradesh</option>
+                <option value="state">Assam</option>
+                <option value="state">Bihar</option>
+                <option value="state">Chhattisgarh</option>
+                <option value="state">Goa</option>
+                <option value="state">Gujarat</option>
+                <option value="state">Haryana</option>
+                <option value="state">Himachal Pradesh</option>
+                <option value="state">Jharkhand</option>
+                <option value="state">Karnataka</option>
+                <option value="state">Kerala</option>
+                <option value="state">Madhya Pradesh</option>
+                <option value="state">Maharashtra</option>
+                <option value="state">Manipur</option>
+                <option value="state">Meghalaya</option>
+                <option value="state">Mizoram</option>
+                <option value="state">Nagaland</option>
+                <option value="state">Odisha</option>
+                <option value="state">Punjab</option>
+                <option value="state">Rajasthan</option>
+                <option value="state">Sikkim</option>
+                <option value="state">Tamil Nadu</option>
+                <option value="state">Telangana</option>
+                <option value="state">Tripura</option>            
+                <option value="state">Uttarakhand</option>
+                <option value="state">Uttar Pradesh</option>
+                <option value="state">West Bengal</option>
+                <option value="state">Andaman and Nicobar</option>
+                <option value="state">Chandigarh</option>
+                <option value="state">Dadra and Nagar Haveli</option>
+                <option value="state">Daman and Diu</option>
+                <option value="state">New Delhi</option>
+                <option value="state">Jammu and Kashmir</option>
+                <option value="state">Lakshadweep</option>
+                <option value="state">Ladakh</option>
+                <option value="state">Puducherry</option>
+                </select>
+            <input type="text" id="city" placeholder="City" required>
+            <input type="text" id="pincode" placeholder="Pincode" required>
+            <button type="submit">Search</button>
+        </form>
+        <div id="map" style="height: 400px;"></div>
+        <div id="results"></div>
+    </div>
+    <script src="script1.js"></script>
+</body>
+</html>

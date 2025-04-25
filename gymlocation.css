@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    background-color: #eceaff;
+    color: #1a1a1a;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  header {
+    background: #eceaff;
+    position: sticky; top: 0%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .sub-menu-wrap {
+    font-family: 'sans-serif';
+    position: absolute;
+    top: 12%;
+    right: 2%;
+    width: 300px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+  .sub-menu-wrap.open-menu{
+    max-height: 400px;
+  }
+  .sub-menu {
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+  }
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  .user-info h2 {
+    font-weight: 500;
+ }
+ .user-info img {
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+ }
+ .sub-menu hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin: 15px 0 10px;
+ }
+ .sub-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #1a1a1a;
+    margin: 12px 0 ;
+ }
+ .sub-menu-link p {
+    width: 100%;
+ }
+ .sub-menu-link img {
+    width: 40px;
+    background: #e5e5e5;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px;
+ }
+ .sub-menu-link span {
+    font-size: 22px;
+    transition: 0.5s;
+ }
+ .sub-menu-link:hover span{
+    transform: translateX(5px);
+ }
+ .sub-menu-link:hover p{
+    font-weight: 600;
+ }
+
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+form {
+    margin: 20px 0;
+}
+
+input {
+    margin: 5px;
+    padding: 10px;
+    width: 200px;
+    border-radius: 1px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: yellowgreen;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: red;
+}
+
+#results {
+    margin-top: 20px;
+}
